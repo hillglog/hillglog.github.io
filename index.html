@@ -9,17 +9,20 @@
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
     <script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.wjs"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
 </head>
 <center>
 
     <body class="is-boxed has-animations">
         <div class="body-wrap">
-            
-            <header class="site-header"><div style="display: inline-block; ertical-align: middle; " ><img style="width: 50px; height: auto class="header-logo-image" src="./dist/images/logo1.svg" alt="Logo">     <span>大和 テック 株式 会社</span>
- </div><!--  /dist/images/logo.svg -->
-                
+
+            <header class="site-header">
+                <div><img
+                        style="width: 50px; height: auto" class= "header-logo-image" src="./dist/images/logo1.svg"
+                        alt="Logo"> <span>大和 テック 株式 会社</span>
+                </div><!--  /dist/images/logo.svg -->
+
             </header>
 
             <main>
@@ -30,7 +33,7 @@
                                 <h2 class="hero-title mt-0">EDI CSV Modification </h2>
                                 <p class="hero-paragraph">ドロップダウンから会社名を選択し、csv ファイルをアップロードして、「CSV
                                     修正」をClick.<br>--------------------------------</p>
-                             
+
                                 <select name="edies" id="companyedi">
                                     <option value="company_name">...会社名...</option>
                                     <option value="company1">Murata_Honsya</option>
@@ -90,47 +93,60 @@
 
                                                             if (true) {
                                                                 // Rearrange columns 1, 2, 3, 4, 5, 6, 7, 8, 9 to 1, 2, 3, 5, 6, 4, 7, 8, 9
-                                                                const temp1 = columns[0];
-                                                                const temp2 = columns[1];
-                                                                const temp3 = columns[2];
-                                                                const temp4 = columns[3];
-                                                                const temp5 = columns[4];
-                                                                const temp6 = columns[5];
-                                                                const temp7 = columns[6];
-                                                                const temp8 = columns[7];
-                                                                const temp9 = columns[8];
-                                                                const temp10 = columns[9];
-                                                                const temp11 = columns[10];
-                                                                const temp12 = columns[11];
-                                                                const temp13 = columns[12];
-                                                                const temp14 = columns[13];
-                                                                const temp15 = columns[14];
-                                                                const temp16 = columns[15];
-                                                                const temp17 = columns[16];
-                                                                const temp18 = columns[17];
-                                                                const temp19 = columns[18];
-                                                                const temp20 = columns[19];
+                                                                const temp0 = columns[0];
+                                                                const temp1 = columns[1];
+                                                                const temp2 = columns[2];
+                                                                const temp3 = columns[3];
+                                                                const temp4 = columns[4];
+                                                                const temp5 = columns[5];
+                                                                const temp6 = columns[6];
+                                                                const temp7 = columns[7];
+                                                                // const temp8 = columns[8];
+                                                                // const temp9 = columns[9];
+                                                                // const temp10 = columns[10];
+                                                                // const temp11 = columns[11];
+                                                                // const temp12 = columns[12];
+                                                                // const temp13 = columns[13];
+                                                                // const temp14 = columns[14];
+                                                                // const temp15 = columns[15];
+                                                                // const temp16 = columns[16];
+                                                                // const temp17 = columns[17];
+                                                                // const temp18 = columns[18];
+                                                                // const temp19 = columns[19];
 
 
-                                                                columns[0] = temp20;
-                                                                columns[1] = temp4;
-                                                                columns[2] = temp10;
-                                                                columns[3] = temp15;
-                                                                columns[4] = temp16;
-                                                                columns[5] = temp14;
-                                                                columns[6] = temp17;
-                                                                columns[7] = temp18;
+                                                                columns[0] = temp0;
+                                                                columns[1] = temp1;
+                                                                columns[2] = temp2;
+                                                                columns[3] = temp3;
+                                                                columns[4] = temp4;
+                                                                columns[5] = temp5;
+                                                                columns[6] = temp6;
+                                                                columns[7] = temp7;
+                                                                // columns[8] = temp4;
+                                                                // columns[9] = temp2;
+                                                                // columns[10] = temp19;
+                                                                // columns[11] = temp17;
+                                                                // columns[12] = temp15;
+                                                                // columns[13] = temp13;
+                                                                // columns[14] = temp11;
+                                                                // columns[15] = temp9;
+                                                                // columns[16] = temp7;
+                                                                // columns[17] = temp5;
+                                                                // columns[18] = temp3;
+                                                                // columns[19] = temp1;
+
 
                                                             }
                                                             // Remove the last 3 columns
-                                                            if (columns.length >= 8) {
-                                                                columns.splice(-12);
+                                                            if (columns.length >= 15) {
+                                                                columns.splice(-5);
                                                             }
 
                                                             return columns.join(',');
                                                         });
 
-                                                        const modifiedCSV = modifiedRows.join('\n');
+                                                        const modifiedCSV = modifiedRows.join('\n');//------
                                                         const blob = new Blob([modifiedCSV], { type: 'text/csv' });
                                                         const downloadLink = document.createElement('a');
                                                         downloadLink.href = URL.createObjectURL(blob);
@@ -156,42 +172,53 @@
 
                                                             if (true) {
                                                                 // Rearrange columns 1, 2, 3, 4, 5, 6, 7, 8, 9 to 1, 2, 3, 5, 6, 4, 7, 8, 9
-                                                                const temp1 = columns[0];
-                                                                const temp2 = columns[1];
-                                                                const temp3 = columns[2];
-                                                                const temp4 = columns[3];
-                                                                const temp5 = columns[4];
-                                                                const temp6 = columns[5];
-                                                                const temp7 = columns[6];
-                                                                const temp8 = columns[7];
-                                                                const temp9 = columns[8];
-                                                                const temp10 = columns[9];
-                                                                const temp11 = columns[10];
-                                                                const temp12 = columns[11];
-                                                                const temp13 = columns[12];
-                                                                const temp14 = columns[13];
-                                                                const temp15 = columns[14];
-                                                                const temp16 = columns[15];
-                                                                const temp17 = columns[16];
-                                                                const temp18 = columns[17];
-                                                                const temp19 = columns[18];
-                                                                const temp20 = columns[19];
+                                                                // const temp0 = columns[0];
+                                                                // const temp1 = columns[1];
+                                                                // const temp2 = columns[2];
+                                                                // const temp3 = columns[3];
+                                                                // const temp4 = columns[4];
+                                                                // const temp5 = columns[5];
+                                                                // const temp6 = columns[6];
+                                                                // const temp7 = columns[7];
+                                                                // const temp8 = columns[8];
+                                                                // const temp9 = columns[9];
+                                                                // const temp10 = columns[10];
+                                                                // const temp11 = columns[11];
+                                                                // const temp12 = columns[12];
+                                                                // const temp13 = columns[13];
+                                                                // const temp14 = columns[14];
+                                                                // const temp15 = columns[15];
+                                                                // const temp16 = columns[16];
+                                                                // const temp17 = columns[17];
+                                                                // const temp18 = columns[18];
+                                                                // const temp19 = columns[19];
 
 
-                                                                columns[0] = temp20;
-                                                                columns[1] = temp4;
-                                                                columns[2] = temp10;
-                                                                columns[3] = temp15;
-                                                                columns[4] = temp16;
-                                                                columns[5] = temp14;
-                                                                columns[6] = temp17;
-                                                                columns[7] = temp18;
+                                                                // columns[0] = temp0;
+                                                                // columns[1] = temp9;
+                                                                // columns[2] = temp7;
+                                                                // columns[3] = temp3;
+                                                                // columns[4] = temp5;
+                                                                // columns[5] = temp1;
+                                                                // columns[6] = temp8;
+                                                                // columns[7] = temp6;
+                                                                // columns[8] = temp4;
+                                                                // columns[9] = temp2;
+                                                                // columns[10] = temp19;
+                                                                // columns[11] = temp17;
+                                                                // columns[12] = temp15;
+                                                                // columns[13] = temp13;
+                                                                // columns[14] = temp11;
+                                                                // columns[15] = temp9;
+                                                                // columns[16] = temp7;
+                                                                // columns[17] = temp5;
+                                                                // columns[18] = temp3;
+                                                                // columns[19] = temp1;
 
                                                             }
-
                                                             // Remove the last 3 columns
-                                                            if (columns.length >= 6) {
-                                                                columns.splice(-3);
+                                                            if (columns.length >= 10) {
+                                                                columns.splice(-10);
                                                             }
 
                                                             return columns.join(',');
@@ -223,36 +250,48 @@
 
                                                             if (true) {
                                                                 // Rearrange columns 1, 2, 3, 4, 5, 6, 7, 8, 9 to 1, 2, 3, 5, 6, 4, 7, 8, 9
-                                                                const temp1 = columns[0];
-                                                                const temp2 = columns[1];
-                                                                const temp3 = columns[2];
-                                                                const temp4 = columns[3];
-                                                                const temp5 = columns[4];
-                                                                const temp6 = columns[5];
-                                                                const temp7 = columns[6];
-                                                                const temp8 = columns[7];
-                                                                const temp9 = columns[8];
-                                                                const temp10 = columns[9];
-                                                                const temp11 = columns[10];
-                                                                const temp12 = columns[11];
-                                                                const temp13 = columns[12];
-                                                                const temp14 = columns[13];
-                                                                const temp15 = columns[14];
-                                                                const temp16 = columns[15];
-                                                                const temp17 = columns[16];
-                                                                const temp18 = columns[17];
-                                                                const temp19 = columns[18];
-                                                                const temp20 = columns[19];
+                                                                // const temp0 = columns[0];
+                                                                // const temp1 = columns[1];
+                                                                // const temp2 = columns[2];
+                                                                // const temp3 = columns[3];
+                                                                // const temp4 = columns[4];
+                                                                // const temp5 = columns[5];
+                                                                // const temp6 = columns[6];
+                                                                // const temp7 = columns[7];
+                                                                // const temp8 = columns[8];
+                                                                // const temp9 = columns[9];
+                                                                // const temp10 = columns[10];
+                                                                // const temp11 = columns[11];
+                                                                // const temp12 = columns[12];
+                                                                // const temp13 = columns[13];
+                                                                // const temp14 = columns[14];
+                                                                // const temp15 = columns[15];
+                                                                // const temp16 = columns[16];
+                                                                // const temp17 = columns[17];
+                                                                // const temp18 = columns[18];
+                                                                // const temp19 = columns[19];
 
 
-                                                                columns[0] = temp20;
-                                                                columns[1] = temp4;
-                                                                columns[2] = temp10;
-                                                                columns[3] = temp15;
-                                                                columns[4] = temp16;
-                                                                columns[5] = temp14;
-                                                                columns[6] = temp17;
-                                                                columns[7] = temp18;
+                                                                // columns[0] = temp0;
+                                                                // columns[1] = temp9;
+                                                                // columns[2] = temp7;
+                                                                // columns[3] = temp3;
+                                                                // columns[4] = temp5;
+                                                                // columns[5] = temp1;
+                                                                // columns[6] = temp8;
+                                                                // columns[7] = temp6;
+                                                                // columns[8] = temp4;
+                                                                // columns[9] = temp2;
+                                                                // columns[10] = temp19;
+                                                                // columns[11] = temp17;
+                                                                // columns[12] = temp15;
+                                                                // columns[13] = temp13;
+                                                                // columns[14] = temp11;
+                                                                // columns[15] = temp9;
+                                                                // columns[16] = temp7;
+                                                                // columns[17] = temp5;
+                                                                // columns[18] = temp3;
+                                                                // columns[19] = temp1;
 
                                                             }
 
@@ -290,36 +329,48 @@
 
                                                             if (true) {
                                                                 // Rearrange columns 1, 2, 3, 4, 5, 6, 7, 8, 9 to 1, 2, 3, 5, 6, 4, 7, 8, 9
-                                                                const temp1 = columns[0];
-                                                                const temp2 = columns[1];
-                                                                const temp3 = columns[2];
-                                                                const temp4 = columns[3];
-                                                                const temp5 = columns[4];
-                                                                const temp6 = columns[5];
-                                                                const temp7 = columns[6];
-                                                                const temp8 = columns[7];
-                                                                const temp9 = columns[8];
-                                                                const temp10 = columns[9];
-                                                                const temp11 = columns[10];
-                                                                const temp12 = columns[11];
-                                                                const temp13 = columns[12];
-                                                                const temp14 = columns[13];
-                                                                const temp15 = columns[14];
-                                                                const temp16 = columns[15];
-                                                                const temp17 = columns[16];
-                                                                const temp18 = columns[17];
-                                                                const temp19 = columns[18];
-                                                                const temp20 = columns[19];
+                                                                // const temp0 = columns[0];
+                                                                // const temp1 = columns[1];
+                                                                // const temp2 = columns[2];
+                                                                // const temp3 = columns[3];
+                                                                // const temp4 = columns[4];
+                                                                // const temp5 = columns[5];
+                                                                // const temp6 = columns[6];
+                                                                // const temp7 = columns[7];
+                                                                // const temp8 = columns[8];
+                                                                // const temp9 = columns[9];
+                                                                // const temp10 = columns[10];
+                                                                // const temp11 = columns[11];
+                                                                // const temp12 = columns[12];
+                                                                // const temp13 = columns[13];
+                                                                // const temp14 = columns[14];
+                                                                // const temp15 = columns[15];
+                                                                // const temp16 = columns[16];
+                                                                // const temp17 = columns[17];
+                                                                // const temp18 = columns[18];
+                                                                // const temp19 = columns[19];
 
 
-                                                                columns[0] = temp20;
-                                                                columns[1] = temp4;
-                                                                columns[2] = temp10;
-                                                                columns[3] = temp15;
-                                                                columns[4] = temp16;
-                                                                columns[5] = temp14;
-                                                                columns[6] = temp17;
-                                                                columns[7] = temp18;
+                                                                // columns[0] = temp0;
+                                                                // columns[1] = temp9;
+                                                                // columns[2] = temp7;
+                                                                // columns[3] = temp3;
+                                                                // columns[4] = temp5;
+                                                                // columns[5] = temp1;
+                                                                // columns[6] = temp8;
+                                                                // columns[7] = temp6;
+                                                                // columns[8] = temp4;
+                                                                // columns[9] = temp2;
+                                                                // columns[10] = temp19;
+                                                                // columns[11] = temp17;
+                                                                // columns[12] = temp15;
+                                                                // columns[13] = temp13;
+                                                                // columns[14] = temp11;
+                                                                // columns[15] = temp9;
+                                                                // columns[16] = temp7;
+                                                                // columns[17] = temp5;
+                                                                // columns[18] = temp3;
+                                                                // columns[19] = temp1;
 
                                                             }
                                                             // Remove the last 3 columns
@@ -356,36 +407,48 @@
 
                                                             if (true) {
                                                                 // Rearrange columns 1, 2, 3, 4, 5, 6, 7, 8, 9 to 1, 2, 3, 5, 6, 4, 7, 8, 9
-                                                                const temp1 = columns[0];
-                                                                const temp2 = columns[1];
-                                                                const temp3 = columns[2];
-                                                                const temp4 = columns[3];
-                                                                const temp5 = columns[4];
-                                                                const temp6 = columns[5];
-                                                                const temp7 = columns[6];
-                                                                const temp8 = columns[7];
-                                                                const temp9 = columns[8];
-                                                                const temp10 = columns[9];
-                                                                const temp11 = columns[10];
-                                                                const temp12 = columns[11];
-                                                                const temp13 = columns[12];
-                                                                const temp14 = columns[13];
-                                                                const temp15 = columns[14];
-                                                                const temp16 = columns[15];
-                                                                const temp17 = columns[16];
-                                                                const temp18 = columns[17];
-                                                                const temp19 = columns[18];
-                                                                const temp20 = columns[19];
+                                                                // const temp0 = columns[0];
+                                                                // const temp1 = columns[1];
+                                                                // const temp2 = columns[2];
+                                                                // const temp3 = columns[3];
+                                                                // const temp4 = columns[4];
+                                                                // const temp5 = columns[5];
+                                                                // const temp6 = columns[6];
+                                                                // const temp7 = columns[7];
+                                                                // const temp8 = columns[8];
+                                                                // const temp9 = columns[9];
+                                                                // const temp10 = columns[10];
+                                                                // const temp11 = columns[11];
+                                                                // const temp12 = columns[12];
+                                                                // const temp13 = columns[13];
+                                                                // const temp14 = columns[14];
+                                                                // const temp15 = columns[15];
+                                                                // const temp16 = columns[16];
+                                                                // const temp17 = columns[17];
+                                                                // const temp18 = columns[18];
+                                                                // const temp19 = columns[19];
 
 
-                                                                columns[0] = temp20;
-                                                                columns[1] = temp4;
-                                                                columns[2] = temp10;
-                                                                columns[3] = temp15;
-                                                                columns[4] = temp16;
-                                                                columns[5] = temp14;
-                                                                columns[6] = temp17;
-                                                                columns[7] = temp18;
+                                                                // columns[0] = temp0;
+                                                                // columns[1] = temp9;
+                                                                // columns[2] = temp7;
+                                                                // columns[3] = temp3;
+                                                                // columns[4] = temp5;
+                                                                // columns[5] = temp1;
+                                                                // columns[6] = temp8;
+                                                                // columns[7] = temp6;
+                                                                // columns[8] = temp4;
+                                                                // columns[9] = temp2;
+                                                                // columns[10] = temp19;
+                                                                // columns[11] = temp17;
+                                                                // columns[12] = temp15;
+                                                                // columns[13] = temp13;
+                                                                // columns[14] = temp11;
+                                                                // columns[15] = temp9;
+                                                                // columns[16] = temp7;
+                                                                // columns[17] = temp5;
+                                                                // columns[18] = temp3;
+                                                                // columns[19] = temp1;
 
                                                             }
 
@@ -423,36 +486,48 @@
 
                                                             if (true) {
                                                                 // Rearrange columns 1, 2, 3, 4, 5, 6, 7, 8, 9 to 1, 2, 3, 5, 6, 4, 7, 8, 9
-                                                                const temp1 = columns[0];
-                                                                const temp2 = columns[1];
-                                                                const temp3 = columns[2];
-                                                                const temp4 = columns[3];
-                                                                const temp5 = columns[4];
-                                                                const temp6 = columns[5];
-                                                                const temp7 = columns[6];
-                                                                const temp8 = columns[7];
-                                                                const temp9 = columns[8];
-                                                                const temp10 = columns[9];
-                                                                const temp11 = columns[10];
-                                                                const temp12 = columns[11];
-                                                                const temp13 = columns[12];
-                                                                const temp14 = columns[13];
-                                                                const temp15 = columns[14];
-                                                                const temp16 = columns[15];
-                                                                const temp17 = columns[16];
-                                                                const temp18 = columns[17];
-                                                                const temp19 = columns[18];
-                                                                const temp20 = columns[19];
+                                                                // const temp0 = columns[0];
+                                                                // const temp1 = columns[1];
+                                                                // const temp2 = columns[2];
+                                                                // const temp3 = columns[3];
+                                                                // const temp4 = columns[4];
+                                                                // const temp5 = columns[5];
+                                                                // const temp6 = columns[6];
+                                                                // const temp7 = columns[7];
+                                                                // const temp8 = columns[8];
+                                                                // const temp9 = columns[9];
+                                                                // const temp10 = columns[10];
+                                                                // const temp11 = columns[11];
+                                                                // const temp12 = columns[12];
+                                                                // const temp13 = columns[13];
+                                                                // const temp14 = columns[14];
+                                                                // const temp15 = columns[15];
+                                                                // const temp16 = columns[16];
+                                                                // const temp17 = columns[17];
+                                                                // const temp18 = columns[18];
+                                                                // const temp19 = columns[19];
 
 
-                                                                columns[0] = temp20;
-                                                                columns[1] = temp4;
-                                                                columns[2] = temp10;
-                                                                columns[3] = temp15;
-                                                                columns[4] = temp16;
-                                                                columns[5] = temp14;
-                                                                columns[6] = temp17;
-                                                                columns[7] = temp18;
+                                                                // columns[0] = temp0;
+                                                                // columns[1] = temp9;
+                                                                // columns[2] = temp7;
+                                                                // columns[3] = temp3;
+                                                                // columns[4] = temp5;
+                                                                // columns[5] = temp1;
+                                                                // columns[6] = temp8;
+                                                                // columns[7] = temp6;
+                                                                // columns[8] = temp4;
+                                                                // columns[9] = temp2;
+                                                                // columns[10] = temp19;
+                                                                // columns[11] = temp17;
+                                                                // columns[12] = temp15;
+                                                                // columns[13] = temp13;
+                                                                // columns[14] = temp11;
+                                                                // columns[15] = temp9;
+                                                                // columns[16] = temp7;
+                                                                // columns[17] = temp5;
+                                                                // columns[18] = temp3;
+                                                                // columns[19] = temp1;
 
                                                             }
 
@@ -490,36 +565,48 @@
 
                                                             if (true) {
                                                                 // Rearrange columns 1, 2, 3, 4, 5, 6, 7, 8, 9 to 1, 2, 3, 5, 6, 4, 7, 8, 9
-                                                                const temp1 = columns[0];
-                                                                const temp2 = columns[1];
-                                                                const temp3 = columns[2];
-                                                                const temp4 = columns[3];
-                                                                const temp5 = columns[4];
-                                                                const temp6 = columns[5];
-                                                                const temp7 = columns[6];
-                                                                const temp8 = columns[7];
-                                                                const temp9 = columns[8];
-                                                                const temp10 = columns[9];
-                                                                const temp11 = columns[10];
-                                                                const temp12 = columns[11];
-                                                                const temp13 = columns[12];
-                                                                const temp14 = columns[13];
-                                                                const temp15 = columns[14];
-                                                                const temp16 = columns[15];
-                                                                const temp17 = columns[16];
-                                                                const temp18 = columns[17];
-                                                                const temp19 = columns[18];
-                                                                const temp20 = columns[19];
+                                                                // const temp0 = columns[0];
+                                                                // const temp1 = columns[1];
+                                                                // const temp2 = columns[2];
+                                                                // const temp3 = columns[3];
+                                                                // const temp4 = columns[4];
+                                                                // const temp5 = columns[5];
+                                                                // const temp6 = columns[6];
+                                                                // const temp7 = columns[7];
+                                                                // const temp8 = columns[8];
+                                                                // const temp9 = columns[9];
+                                                                // const temp10 = columns[10];
+                                                                // const temp11 = columns[11];
+                                                                // const temp12 = columns[12];
+                                                                // const temp13 = columns[13];
+                                                                // const temp14 = columns[14];
+                                                                // const temp15 = columns[15];
+                                                                // const temp16 = columns[16];
+                                                                // const temp17 = columns[17];
+                                                                // const temp18 = columns[18];
+                                                                // const temp19 = columns[19];
 
 
-                                                                columns[0] = temp20;
-                                                                columns[1] = temp4;
-                                                                columns[2] = temp10;
-                                                                columns[3] = temp15;
-                                                                columns[4] = temp16;
-                                                                columns[5] = temp14;
-                                                                columns[6] = temp17;
-                                                                columns[7] = temp18;
+                                                                // columns[0] = temp0;
+                                                                // columns[1] = temp9;
+                                                                // columns[2] = temp7;
+                                                                // columns[3] = temp3;
+                                                                // columns[4] = temp5;
+                                                                // columns[5] = temp1;
+                                                                // columns[6] = temp8;
+                                                                // columns[7] = temp6;
+                                                                // columns[8] = temp4;
+                                                                // columns[9] = temp2;
+                                                                // columns[10] = temp19;
+                                                                // columns[11] = temp17;
+                                                                // columns[12] = temp15;
+                                                                // columns[13] = temp13;
+                                                                // columns[14] = temp11;
+                                                                // columns[15] = temp9;
+                                                                // columns[16] = temp7;
+                                                                // columns[17] = temp5;
+                                                                // columns[18] = temp3;
+                                                                // columns[19] = temp1;
 
                                                             }
 
@@ -557,36 +644,48 @@
 
                                                             if (true) {
                                                                 // Rearrange columns 1, 2, 3, 4, 5, 6, 7, 8, 9 to 1, 2, 3, 5, 6, 4, 7, 8, 9
-                                                                const temp1 = columns[0];
-                                                                const temp2 = columns[1];
-                                                                const temp3 = columns[2];
-                                                                const temp4 = columns[3];
-                                                                const temp5 = columns[4];
-                                                                const temp6 = columns[5];
-                                                                const temp7 = columns[6];
-                                                                const temp8 = columns[7];
-                                                                const temp9 = columns[8];
-                                                                const temp10 = columns[9];
-                                                                const temp11 = columns[10];
-                                                                const temp12 = columns[11];
-                                                                const temp13 = columns[12];
-                                                                const temp14 = columns[13];
-                                                                const temp15 = columns[14];
-                                                                const temp16 = columns[15];
-                                                                const temp17 = columns[16];
-                                                                const temp18 = columns[17];
-                                                                const temp19 = columns[18];
-                                                                const temp20 = columns[19];
+                                                                // const temp0 = columns[0];
+                                                                // const temp1 = columns[1];
+                                                                // const temp2 = columns[2];
+                                                                // const temp3 = columns[3];
+                                                                // const temp4 = columns[4];
+                                                                // const temp5 = columns[5];
+                                                                // const temp6 = columns[6];
+                                                                // const temp7 = columns[7];
+                                                                // const temp8 = columns[8];
+                                                                // const temp9 = columns[9];
+                                                                // const temp10 = columns[10];
+                                                                // const temp11 = columns[11];
+                                                                // const temp12 = columns[12];
+                                                                // const temp13 = columns[13];
+                                                                // const temp14 = columns[14];
+                                                                // const temp15 = columns[15];
+                                                                // const temp16 = columns[16];
+                                                                // const temp17 = columns[17];
+                                                                // const temp18 = columns[18];
+                                                                // const temp19 = columns[19];
 
 
-                                                                columns[0] = temp20;
-                                                                columns[1] = temp4;
-                                                                columns[2] = temp10;
-                                                                columns[3] = temp15;
-                                                                columns[4] = temp16;
-                                                                columns[5] = temp14;
-                                                                columns[6] = temp17;
-                                                                columns[7] = temp18;
+                                                                // columns[0] = temp0;
+                                                                // columns[1] = temp9;
+                                                                // columns[2] = temp7;
+                                                                // columns[3] = temp3;
+                                                                // columns[4] = temp5;
+                                                                // columns[5] = temp1;
+                                                                // columns[6] = temp8;
+                                                                // columns[7] = temp6;
+                                                                // columns[8] = temp4;
+                                                                // columns[9] = temp2;
+                                                                // columns[10] = temp19;
+                                                                // columns[11] = temp17;
+                                                                // columns[12] = temp15;
+                                                                // columns[13] = temp13;
+                                                                // columns[14] = temp11;
+                                                                // columns[15] = temp9;
+                                                                // columns[16] = temp7;
+                                                                // columns[17] = temp5;
+                                                                // columns[18] = temp3;
+                                                                // columns[19] = temp1;
 
                                                             }
 
@@ -623,37 +722,48 @@
                                                             const columns = row.split(',');
                                                             if (true) {
                                                                 // Rearrange columns 1, 2, 3, 4, 5, 6, 7, 8, 9 to 1, 2, 3, 5, 6, 4, 7, 8, 9
-                                                                const temp1 = columns[0];
-                                                                const temp2 = columns[1];
-                                                                const temp3 = columns[2];
-                                                                const temp4 = columns[3];
-                                                                const temp5 = columns[4];
-                                                                const temp6 = columns[5];
-                                                                const temp7 = columns[6];
-                                                                const temp8 = columns[7];
-                                                                const temp9 = columns[8];
-                                                                const temp10 = columns[9];
-                                                                const temp11 = columns[10];
-                                                                const temp12 = columns[11];
-                                                                const temp13 = columns[12];
-                                                                const temp14 = columns[13];
-                                                                const temp15 = columns[14];
-                                                                const temp16 = columns[15];
-                                                                const temp17 = columns[16];
-                                                                const temp18 = columns[17];
-                                                                const temp19 = columns[18];
-                                                                const temp20 = columns[19];
+                                                                // const temp0 = columns[0];
+                                                                // const temp1 = columns[1];
+                                                                // const temp2 = columns[2];
+                                                                // const temp3 = columns[3];
+                                                                // const temp4 = columns[4];
+                                                                // const temp5 = columns[5];
+                                                                // const temp6 = columns[6];
+                                                                // const temp7 = columns[7];
+                                                                // const temp8 = columns[8];
+                                                                // const temp9 = columns[9];
+                                                                // const temp10 = columns[10];
+                                                                // const temp11 = columns[11];
+                                                                // const temp12 = columns[12];
+                                                                // const temp13 = columns[13];
+                                                                // const temp14 = columns[14];
+                                                                // const temp15 = columns[15];
+                                                                // const temp16 = columns[16];
+                                                                // const temp17 = columns[17];
+                                                                // const temp18 = columns[18];
+                                                                // const temp19 = columns[19];
 
 
-                                                                columns[0] = temp20;
-                                                                columns[1] = temp4;
-                                                                columns[2] = temp10;
-                                                                columns[3] = temp15;
-                                                                columns[4] = temp16;
-                                                                columns[5] = temp14;
-                                                                columns[6] = temp17;
-                                                                columns[7] = temp18;
-
+                                                                // columns[0] = temp0;
+                                                                // columns[1] = temp9;
+                                                                // columns[2] = temp7;
+                                                                // columns[3] = temp3;
+                                                                // columns[4] = temp5;
+                                                                // columns[5] = temp1;
+                                                                // columns[6] = temp8;
+                                                                // columns[7] = temp6;
+                                                                // columns[8] = temp4;
+                                                                // columns[9] = temp2;
+                                                                // columns[10] = temp19;
+                                                                // columns[11] = temp17;
+                                                                // columns[12] = temp15;
+                                                                // columns[13] = temp13;
+                                                                // columns[14] = temp11;
+                                                                // columns[15] = temp9;
+                                                                // columns[16] = temp7;
+                                                                // columns[17] = temp5;
+                                                                // columns[18] = temp3;
+                                                                // columns[19] = temp1;
                                                             }
 
                                                             // Remove the last 3 columns
@@ -689,36 +799,48 @@
 
                                                             if (true) {
                                                                 // Rearrange columns 1, 2, 3, 4, 5, 6, 7, 8, 9 to 1, 2, 3, 5, 6, 4, 7, 8, 9
-                                                                const temp1 = columns[0];
-                                                                const temp2 = columns[1];
-                                                                const temp3 = columns[2];
-                                                                const temp4 = columns[3];
-                                                                const temp5 = columns[4];
-                                                                const temp6 = columns[5];
-                                                                const temp7 = columns[6];
-                                                                const temp8 = columns[7];
-                                                                const temp9 = columns[8];
-                                                                const temp10 = columns[9];
-                                                                const temp11 = columns[10];
-                                                                const temp12 = columns[11];
-                                                                const temp13 = columns[12];
-                                                                const temp14 = columns[13];
-                                                                const temp15 = columns[14];
-                                                                const temp16 = columns[15];
-                                                                const temp17 = columns[16];
-                                                                const temp18 = columns[17];
-                                                                const temp19 = columns[18];
-                                                                const temp20 = columns[19];
+                                                                // const temp0 = columns[0];
+                                                                // const temp1 = columns[1];
+                                                                // const temp2 = columns[2];
+                                                                // const temp3 = columns[3];
+                                                                // const temp4 = columns[4];
+                                                                // const temp5 = columns[5];
+                                                                // const temp6 = columns[6];
+                                                                // const temp7 = columns[7];
+                                                                // const temp8 = columns[8];
+                                                                // const temp9 = columns[9];
+                                                                // const temp10 = columns[10];
+                                                                // const temp11 = columns[11];
+                                                                // const temp12 = columns[12];
+                                                                // const temp13 = columns[13];
+                                                                // const temp14 = columns[14];
+                                                                // const temp15 = columns[15];
+                                                                // const temp16 = columns[16];
+                                                                // const temp17 = columns[17];
+                                                                // const temp18 = columns[18];
+                                                                // const temp19 = columns[19];
 
 
-                                                                columns[0] = temp20;
-                                                                columns[1] = temp4;
-                                                                columns[2] = temp10;
-                                                                columns[3] = temp15;
-                                                                columns[4] = temp16;
-                                                                columns[5] = temp14;
-                                                                columns[6] = temp17;
-                                                                columns[7] = temp18;
+                                                                // columns[0] = temp0;
+                                                                // columns[1] = temp9;
+                                                                // columns[2] = temp7;
+                                                                // columns[3] = temp3;
+                                                                // columns[4] = temp5;
+                                                                // columns[5] = temp1;
+                                                                // columns[6] = temp8;
+                                                                // columns[7] = temp6;
+                                                                // columns[8] = temp4;
+                                                                // columns[9] = temp2;
+                                                                // columns[10] = temp19;
+                                                                // columns[11] = temp17;
+                                                                // columns[12] = temp15;
+                                                                // columns[13] = temp13;
+                                                                // columns[14] = temp11;
+                                                                // columns[15] = temp9;
+                                                                // columns[16] = temp7;
+                                                                // columns[17] = temp5;
+                                                                // columns[18] = temp3;
+                                                                // columns[19] = temp1;
 
                                                             }
 
